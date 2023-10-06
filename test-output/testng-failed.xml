@@ -2,16 +2,15 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
-    <parameter name="password" value="Dmart@9872"/>
-    <parameter name="orderno" value="17998742"/>
-    <parameter name="QTY" value="1"/>
-    <parameter name="DA" value="sourish.d01"/>
+    <parameter name="password" value="Abhinav@6543"/>
+    <parameter name="orderno" value="17993944"/>
     <parameter name="username" value="Abhinav"/>
-    <parameter name="TripsOrderno" value="15210612,15210608,15210610,15210517,15210516"/>
     <classes>
       <class name="cos_Test.COS_TestCases">
         <methods>
+          <include name="CosOrderSearch" invocation-numbers="0"/>
           <include name="Returns"/>
+          <include name="CosConsole"/>
         </methods>
       </class> <!-- cos_Test.COS_TestCases -->
     </classes>

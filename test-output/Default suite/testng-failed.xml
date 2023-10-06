@@ -5,9 +5,7 @@
     <classes>
       <class name="cos_Test.COS_TestCases">
         <methods>
-          <include name="CosOrderSearch"/>
-          <include name="Login"/>
-          <include name="CosConsole"/>
+          <include name="Returns"/>
         </methods>
       </class> <!-- cos_Test.COS_TestCases -->
     </classes>

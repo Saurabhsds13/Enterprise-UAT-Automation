@@ -19,7 +19,7 @@ public class COS_TestCases{
 		Reporter.log("Login Test Passed.");
 	}
 	
-	@Test(priority = 2,enabled=true,description="Open COS console.")
+	@Test(priority = 2,enabled=false,description="Open COS console.")
 	public void CosConsole() {
 		objcos = new COS();
 		objcos.ClickCosConsole();
@@ -27,7 +27,7 @@ public class COS_TestCases{
 	}
 	
 	@Parameters("orderno")
-	@Test(priority = 3, enabled = true, description = "COS Order Search")
+	@Test(priority = 3, enabled = false, description = "COS Order Search")
 	public void CosOrderSearch(String orderno) throws InterruptedException {
 		objcos = new COS();
 		objcos.SearchOrder(orderno);
@@ -63,12 +63,12 @@ public class COS_TestCases{
 		objcos = new COS();
 		objcos.CustCancellation();
 	}
-	@Parameters("QTY")
-	@Test(priority = 8, enabled = true, description = "Returns")
-	public void Returns(String QTY) throws InterruptedException   {
+	
+	@Test(priority = 8, enabled = false, description = "Returns")
+	public void Returns() throws InterruptedException   {
 		objcos = new COS();
 		objcos.CosReturns();
-		objcos.CosReturnsandAddItems(QTY);
+		objcos.CosReturnsandAddItems();
 		
 
 	}

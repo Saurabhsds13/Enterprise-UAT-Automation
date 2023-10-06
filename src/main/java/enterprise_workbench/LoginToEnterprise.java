@@ -33,6 +33,6 @@ public class LoginToEnterprise extends Baseclass {
 		signin.click();
 		Thread.sleep(1000);
 		String actualString = uservalidation.getText();
-		System.out.println(actualString);
+		System.out.println("\tCOS User Name :- "+actualString);
 	}	
 }
