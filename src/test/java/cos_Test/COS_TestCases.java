@@ -19,7 +19,7 @@ public class COS_TestCases{
 		Reporter.log("Login Test Passed.");
 	}
 	
-	@Test(priority = 2,enabled=false,description="Open COS console.")
+	@Test(priority = 2,enabled=true,description="Open COS console.")
 	public void CosConsole() {
 		objcos = new COS();
 		objcos.ClickCosConsole();
@@ -27,7 +27,7 @@ public class COS_TestCases{
 	}
 	
 	@Parameters("orderno")
-	@Test(priority = 3, enabled = false, description = "COS Order Search")
+	@Test(priority = 3, enabled = true, description = "COS Order Search")
 	public void CosOrderSearch(String orderno) throws InterruptedException {
 		objcos = new COS();
 		objcos.SearchOrder(orderno);
@@ -51,20 +51,26 @@ public class COS_TestCases{
 
 	}
 
-	@Test(priority = 6, enabled = false, description = "Internal Cancellation")
+	@Test(priority = 6, enabled = true, description = "Mark Cansel in Shipped Status")
+	public void markCancel() throws InterruptedException {
+		objcos= new COS();
+		objcos.markCancel();
+	}
+	
+	@Test(priority = 7, enabled = false, description = "Internal Cancellation")
 	public void Cancellation() throws InterruptedException {
 		objcos = new COS();
 		objcos.Cancellation();
 
 	}
 
-	@Test(priority = 7, enabled = false, description = "Cust Cancellation")
+	@Test(priority = 8, enabled = false, description = "Cust Cancellation")
 	public void CustCancellation() throws InterruptedException {
 		objcos = new COS();
 		objcos.CustCancellation();
 	}
 	
-	@Test(priority = 8, enabled = false, description = "Returns")
+	@Test(priority = 9, enabled = false, description = "Returns")
 	public void Returns() throws InterruptedException   {
 		objcos = new COS();
 		objcos.CosReturns();

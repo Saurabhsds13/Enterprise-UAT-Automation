@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[*=*=* BROWSER SESSION STARTED *=*=*
@@ -9,16 +9,19 @@
       <![CDATA[Login Test Passed.]]>
     </line>
     <line>
+      <![CDATA[Clicked on COS Console]]>
+    </line>
+    <line>
       <![CDATA[
 *=*=* BROWSER SESSION END *=*=*]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-10-06T14:49:42 IST" name="Suite" finished-at="2023-10-06T14:49:54 IST" duration-ms="12304">
+  <suite started-at="2023-10-06T17:05:42 IST" name="Suite" finished-at="2023-10-06T17:06:32 IST" duration-ms="49900">
     <groups>
     </groups>
-    <test started-at="2023-10-06T14:49:42 IST" name="Test" finished-at="2023-10-06T14:49:54 IST" duration-ms="12304">
+    <test started-at="2023-10-06T17:05:42 IST" name="Test" finished-at="2023-10-06T17:06:32 IST" duration-ms="49900">
       <class name="cos_Test.COS_TestCases">
-        <test-method signature="Login(java.lang.String,java.lang.String)[pri:1, instance:cos_Test.COS_TestCases@48bb62]" started-at="2023-10-06T14:49:48 IST" name="Login" description="This is a Login Test for Enterprise." finished-at="2023-10-06T14:49:54 IST" duration-ms="5642" status="PASS">
+        <test-method signature="Login(java.lang.String,java.lang.String)[pri:1, instance:cos_Test.COS_TestCases@353352b6]" started-at="2023-10-06T17:05:50 IST" name="Login" description="This is a Login Test for Enterprise." finished-at="2023-10-06T17:05:56 IST" duration-ms="5632" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,9 +40,31 @@
             </line>
           </reporter-output>
         </test-method> <!-- Login -->
+        <test-method signature="CosConsole()[pri:2, instance:cos_Test.COS_TestCases@353352b6]" started-at="2023-10-06T17:05:56 IST" name="CosConsole" description="Open COS console." finished-at="2023-10-06T17:06:06 IST" duration-ms="9791" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Clicked on COS Console]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CosConsole -->
+        <test-method signature="CosOrderSearch(java.lang.String)[pri:3, instance:cos_Test.COS_TestCases@353352b6]" started-at="2023-10-06T17:06:06 IST" name="CosOrderSearch" description="COS Order Search" finished-at="2023-10-06T17:06:14 IST" duration-ms="8164" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[18000223]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CosOrderSearch -->
+        <test-method signature="markCancel()[pri:6, instance:cos_Test.COS_TestCases@353352b6]" started-at="2023-10-06T17:06:14 IST" name="markCancel" description="Mark Cansel in Shipped Status" finished-at="2023-10-06T17:06:32 IST" duration-ms="17772" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- markCancel -->
       </class> <!-- cos_Test.COS_TestCases -->
       <class name="enterprise_workbench.Baseclass">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:enterprise_workbench.Baseclass@72035809]" started-at="2023-10-06T14:49:42 IST" name="setUp" finished-at="2023-10-06T14:49:48 IST" duration-ms="6023" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:enterprise_workbench.Baseclass@909217e]" started-at="2023-10-06T17:05:42 IST" name="setUp" finished-at="2023-10-06T17:05:50 IST" duration-ms="7857" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[*=*=* BROWSER SESSION STARTED *=*=*
@@ -47,7 +72,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:enterprise_workbench.Baseclass@72035809]" started-at="2023-10-06T14:49:54 IST" name="tearDown" finished-at="2023-10-06T14:49:54 IST" duration-ms="602" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:enterprise_workbench.Baseclass@909217e]" started-at="2023-10-06T17:06:32 IST" name="tearDown" finished-at="2023-10-06T17:06:32 IST" duration-ms="615" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[

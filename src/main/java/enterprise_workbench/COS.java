@@ -13,7 +13,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class COS extends Baseclass {
 	
-	@FindBy(xpath="//*[contains(text(),'Customer & Order System')]")
+	////*[contains(text(),'Customer & Order System')]
+	@FindBy(xpath="//*[contains(text(),'Cos')]")
 	WebElement cosConsole;
 	@FindBy(xpath = "//input[@placeholder='Search']")
 	WebElement CosOrderSearch;
@@ -69,7 +70,8 @@ public class COS extends Baseclass {
 	WebElement CreateReturnsBtn;
 	@FindBy(xpath = "//button[normalize-space()='Save']")
 	WebElement CreateReturnsSavePUP;
-
+    @FindBy(xpath="//button[normalize-space()='Mark Cancel']")
+	WebElement markCancel;
 	int items;
 	
 	public COS() {
@@ -159,7 +161,33 @@ public class COS extends Baseclass {
 		Thread.sleep(500);
 
 	}
-
+	
+	public void markCancel() throws InterruptedException {
+		((JavascriptExecutor) DR).executeScript("scroll(0,250)");
+		WebDriverWait wait = new WebDriverWait(DR, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.elementToBeClickable(Panel));
+		Panel.click();
+		wait.until(ExpectedConditions.elementToBeClickable(markCancel)).click();
+		Thread.sleep(500);
+		WebElement selectReason=DR.findElement(By.xpath("(//select[@name='reason'])[1]"));
+		selectReason.click();
+		Select Reasons = new Select(selectReason);
+		Reasons.selectByVisibleText("Area Not Reachable");
+		Thread.sleep(500);
+		Reasons.selectByIndex(1);
+		Thread.sleep(500);
+		CreateReturnsSavePUP.click();
+		Thread.sleep(3000);
+		DR.navigate().refresh();
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(OrderStatus));
+		String var=OrderStatus.getText();
+		Thread.sleep(3000);
+		System.out.print("\n\tStatus After Mark Cancel = "+var);
+		System.out.println();
+		
+	}
+	
 	public void CustCancellation() throws InterruptedException {
 		Thread.sleep(2000);
 		((JavascriptExecutor) DR).executeScript("scroll(0,250)");
@@ -271,6 +299,7 @@ public class COS extends Baseclass {
 		CreateReturnsBtn.click();
 		wait.until(ExpectedConditions.elementToBeClickable(CreateReturnsSavePUP));
 //		CreateReturnsSavePUP.click();
+		
 		Thread.sleep(5000);
 	}
 }
